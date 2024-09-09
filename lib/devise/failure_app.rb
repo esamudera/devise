@@ -8,6 +8,7 @@ module Devise
   # in page based on current scope and mapping. If no scope is given, it
   # redirects to the default_url.
   class FailureApp < ActionController::Metal
+    include ActionController::RequestForgeryProtection
     include ActionController::UrlFor
     include ActionController::Redirecting
 
